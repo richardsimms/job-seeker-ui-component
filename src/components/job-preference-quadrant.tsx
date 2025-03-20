@@ -137,7 +137,7 @@ export function JobPreferenceQuadrant() {
             </Button>
           </div>
         </div>
-        <CardDescription className="mt-2 text-sm">{currentQuestion.question}</CardDescription>
+        <CardDescription className="mt-2 text-sm font-semibold">{currentQuestion.question}</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="relative">
@@ -153,15 +153,18 @@ export function JobPreferenceQuadrant() {
             onTouchEnd={handleTouchEnd}
           >
             {/* Quadrant labels */}
-            <div className="absolute top-2 w-full text-center text-sm text-gray-500">{currentQuestion.yAxis.top}</div>
+            <div className="absolute top-2 w-full text-center text-sm text-gray-500">
+              {currentQuestion.yAxis.top}
+              </div>
             <div className="absolute bottom-2 w-full text-center text-sm text-gray-500">
               {currentQuestion.yAxis.bottom}
             </div>
             <div className="absolute left-2 h-full flex items-center text-sm text-gray-500">
-              <span className="transform -rotate-90">{currentQuestion.xAxis.left}</span>
+              <span className="transform -rotate-90 -translate-x-30 w-3xs text-center " >{currentQuestion.xAxis.left}</span>
             </div>
+          
             <div className="absolute right-2 h-full flex items-center text-sm text-gray-500">
-              <span className="transform rotate-90">{currentQuestion.xAxis.right}</span>
+              <span className="transform rotate-90 w-3xs text-center translate-x-30">{currentQuestion.xAxis.right}</span>
             </div>
 
             {/* Grid lines */}
